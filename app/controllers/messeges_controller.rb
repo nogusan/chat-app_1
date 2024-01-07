@@ -20,6 +20,6 @@ class MessegesController < ApplicationController
   private
 
   def message_params
-    params.require(:messege).permit(:content).merge(user_id: current_user.id)
+    params.require(:messege).permit(:content,:image).merge(user_id: current_user.id)
   end
 end
